@@ -18,11 +18,15 @@ If you are developing a production application, we recommend using TypeScript wi
 
 To run the proyect on a dev environment, only use the next command-line
 
-´´´npm run dev´´´
+```bash
+npm run dev
+```
 
 Before that, ensure that all dependencies had been installed, if not, use the next command
 
-´´´npm install´´´
+```bash
+npm install
+```
 
 ## Visualize the project
 
