@@ -1,19 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './styles/App.css'
-import { Header } from  './components/Header'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import LoginForm from './components/LoginForm'
+import MainPage from './components/MainPage'
+import PrivateRoute from './components/PrivateRoutes'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <Header />
-      <div className='body-container'>
-        
-      </div>
-    </>
+    <Router>
+        <Routes>
+            <Route path='/' element={<LoginForm />}/>
+
+            <Route path='/welcome' element={
+              <PrivateRoute >
+                <MainPage />
+              </PrivateRoute>}
+            />
+        </Routes>
+    </Router>
   )
 }
 
